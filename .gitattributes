@@ -1,0 +1,17 @@
+*		text=auto
+
+LICENSE		text
+README.md 	text
+WARNINGS  	text
+*.js 		text
+*.html 		text diff=html
+*.css 		text
+*.mtl		text
+*.obj		text
+
+
+*.png 		binary
+*.jpg 		binary
+*.gif 		binary
+*.svg 		binary
+*.blend		binary
