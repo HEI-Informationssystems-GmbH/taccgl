@@ -119,7 +119,7 @@ root of your private protected web server.
 It contains a directory named `taccgl062`
 with a compressed (`taccgl062/taccgl.js`) and an uncompressed version (`taccgl062/src/taccgl.js`) of the library,
 some documentation, and  example files.
-If you want to run it on a public web site see Installing the Library  (https://www.taccgl.org/InstallLibrary.html) for details.
+If you want to run it on a public web site see Installing the Library  (https://www.taccgl.org/developer_doc/InstallLibrary.html) for details.
 
 Afterwards point your browser to `/taccgl062/index.html`.
 On successful installation this shows some simple examples.
@@ -151,7 +151,7 @@ HRB Mannheim 7273\
 Geschäftssführer: Dr. Helmut Emmelmann\
 Phone: +49 - 621 - 79 51 41\
 Fax:   +49 - 621 - 79 51 61\
-Email: contact@taccgl.org \
+
 
 
 ## Support
