@@ -1,0 +1,280 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=11" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!--  
+taccgl(TM)    version 0.62   index.html
+see https://www.taccgl.org for Examples, Tutorial, Documentation
+
+H.E.I. Informationssysteme GmbH
+Wimpfener Strasse 23
+68259 Mannheim
+Germany
+https://www.taccgl.org
+email: contact@taccgl.org
+Sales Tax ID: DE185233091
+HRB Mannheim 7273
+Geschaeftssfuehrer: Dr. Helmut Emmelmann
+Phone: +49 - 621 - 79 51 41
+Fax:   +49 - 621 - 79 51 61
+
+
+
+
+Copyright (c) 2020 H.E.I.Informationssysteme GmbH (https://www.taccgl.org) and suppliers
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+
+This is BETA Software and known to contain bugs. It is probably
+not implemented completely and will probably not run on all
+browsers and client computers. It will switch off itself on
+certain client computers and browsers. In addition some client
+computers might run animations slowly, animations may appear
+choppy or jumpy, or even client computers might get overloaded or
+even crash. 
+
+
+      M E D I C A L     W A R N I N G   
+      Note that taccgl allows you to add fast flashing and video game like animations to web pages. A small percentage of 
+      the population may experience epileptic symptoms when exposed to such animations. You might want to, or you may even 
+      be required to, add / show an epileptic warning message on your web site before showing such animations and you might 
+      want to or you may even be required to avoid certain types of animations on your web site. Please protect yourself 
+      when programming animations and protect the users of your web site and take the following warning message seriously:  
+ 
+"     EPILEPSY WARNING, READ BEFORE VIEWING THE FOLLOWING ANIMATIONS,                                                       "+
+"     BEFORE USING A VIDEO GAME SYSTEM, BEFORE PROGRAMMING, WATCHING AND PUTTING ANIMATIONS ONLINE                          "+
+"                                                                                                                           "+ 
+"     MEDICAL RESEARCH INDICATES A SMALL PERCENTAGE OF THE POPULATION MAY EXPERIENCE EPILEPTIC SEIZURES OR SEIZURE-LIKE     "+
+"     SYMPTOMS  EXPOSED TO CERTAIN STIMULI, INCLUDING, WITHOUT LIMITATION, LIGHT PATTERNS, FLASHING LIGHTS OR CERTAIN       "+
+"     PATTERNS OF BACKGROUND ON A TELEVISION SCREEN, OR VIDEO MONITOR. EXPOSURE TO THESE STIMULI WHILE PLAYING VIDEO GAMES  "+
+"     OR WATCHING ANIMATIONS MAY INDUCE AN EPILEPTIC SEIZURE OR SEIZURE LIKE SYMPTOMS IN THESE INDIVIDUALS. CERTAIN         "+
+"     CONDITIONS MAY INDUCE EPILEPTIC SYMPTOMS EVEN IN PERSONS WHO HAVE NO PRIOR HISTORY OF SEIZURES OF EPILEPSY. IF YOU    "+
+"     EXPERIENCE ANY OF THE FOLLOWING SYMPTOMS WHILE PLAYING A VIDEO GAME OR WATCH ANIMATIONS --- DIZZINESS, ALTERED VISION,"+
+"     EYE OR MUSCLE TWITCHES, LOSS OF AWARENESS, DISORIENTATION, AND INVOLUNTARZ MOVEMENT OR CONVULSIONS ---                "+
+"     IMMEDIATELY DISCONTINUE USE AND CONSULT YOUR PHYSICAN BEFORE PLAY OR WATCHING ANIMATIONS.                             ";
+-->
+ 
+<title> taccgl Installed  </TITLE> 
+<script src="taccgl.js"></script>
+<!-- if you place this HTML page in a different directory this will no longer work
+     you need to e.g. use an absolute path like <script src="/taccgl062/taccgl.js"></script>  -->
+
+<script>
+  taccgl_Com_dddmode="pic/Mode3D.png";
+  taccgl_Com_ddmode="pic/Mode2D.png";
+  taccgl_Com_off="pic/ModeNo.png";
+  taccgl_MeasureImage="pic/taccglMea";
+  taccgl_ImmediateMeasureImage="pic/taccglMea";
+</script>
+
+<style>
+   body  {font-family:Calibri,helvetica,sans-serif,arial;}
+   #header1div {width:calc(90% + 30px); height:130px; position:relative }
+   #taccglLoadWarning {background-color:red; position : absolute; width:500px; padding:20px; border:solid black 1px }
+   .emp {font-weight:bold; font-size:20px}
+</style>
+</head>
+
+
+<body onload="doOnLoad()">
+<div id="all">
+   <div id="header1div">
+      <img id= "taccgl_CommentImage" src="pic/ModeUnknown.png" style="position:absolute; right:160px; margin-top:10px"
+	   title="Canvas Mode Detected" crossorigin="anonymous">
+      <img id= "taccgl_ImmediateMeasureImage" src="pic/taccglMeaNo.png" style="position:absolute; right:80px; margin-top:10px"
+	   title="Performance Quality measured of previous Animation run" crossorigin="anonymous" width="70px" height="70px">
+      <img id= "taccgl_MeasureImage" src="pic/taccglMeaNo.png" style="position:absolute; right:0px; margin-top:10px"
+	   title="Performance Quality measured of first 10 Animations run" crossorigin="anonymous" width="70px" height="70px">
+      <br>
+      <p style="text-align:right; margin-top:80px; font-size:15px">If images do not show see  <a href="doc/localUsage.html">local usage</a>.</p> 
+   </div>
+
+<div id="myel" style="background-color:#40e040; width:90%; padding:15px; border: solid black 1px; box-shadow : 40px 40px 4px 4px rgba(0,0,0,0.3);">
+
+
+<h1> Welcome to taccGL &trade; 0.62 </h1> 
+
+
+<p id="taccglLoadWarning">
+    The taccgl.js library file was not found.
+    <span class="emp">Please make sure to completely unpack the zip file!</span>
+    The file taccgl.js must be in the same directory as this <tt>index.html</tt> file.
+    Note that it is possible to open this index.html file from inside the zip
+    while the .js definitively must be unpacked before the browser can access it.  
+</p>
+
+<p> The canvas 3D transition and animation library <a href="https://www.taccgl.org/developer_doc/AfterInstallation.html" rel="nofollow"  target="taccgl.org">taccGL</a>
+    has been installed. It allows you to animate CSS formatted HTML elements and 3D objects on your web site using HTML 5 3D canvas.
+    Please click on the example links below to run the examples. If they work fine and 
+  colored logos above appear the library is probably installed successfully. </p>
+
+  
+<p style="font-weight:bold"> It is not intended to install this taccgl-package directly on a public web server  <span style="font-weight:normal">
+    since it contains some documentation and example files. 
+    Follow the instructions <a href="https://www.taccgl.org/developer_doc/InstallLibrary.html">Installing the library on https://www.taccgl.org</a> for installation on a <b>public site</b>.
+
+</p>
+
+<p style="font-weight:bold"> If you are using the library locally without web server <span style="font-weight:normal">(i.e. with "file://" URLs)
+    you need to set some options for additional examples and your experiments 
+    to work, see <a href="doc/localUsage.html">local usage</a>.</span>
+</p>
+
+<p>  See also  <a href="doc/license.html" style="color:red">Impressum, WARNINGS, and License</a>. </p>
+
+<table>
+   <tr>
+      <td valign="top">
+
+<h3> Inpage Examples </h3>
+<div>
+    <a href="javascript:shadowBg();taccgl.actor('myel').rotateMiddle(1,1,0).dur(5).start();taccgl.start('no epilepsy warning')">Rotate</a>  <br>
+    <a href="javascript:shadowBg();taccgl.actor('myel',taccgl.dddBox).rotateMiddle(Math.sqrt(0.9),Math.sqrt(0.1),0).dur(5).start();taccgl.start()">Box</a>  <br>
+    <a href="javascript:multi();">Multi</a>  
+</div>
+
+     </td>
+     <td >
+<h3 style="padding-left:10px"> Parallax Scrolling Examples </h3>
+
+<div style="border-left:1px solid black; padding-left:10px">
+    <a href="parallax-scrolling-examples/example1.html" target="example">Example 1</a>
+    <a href="parallax-scrolling-examples/example2.html" target="example">Example 2</a><br>
+    <a href="parallax-scrolling-examples/example3.html" target="example">Example 3</a>
+    <a href="parallax-scrolling-examples/example4.html" target="example">Example 4</a><br>
+    <a href="parallax-scrolling-examples/example5.html" target="example">Example 5</a>
+    <a href="parallax-scrolling-examples/example6.html" target="example">Example 6</a><br>
+    <a href="parallax-scrolling-examples/example7.html" target="example">Example 7</a>
+    <a href="parallax-scrolling-examples/example8.html" target="example">Example 8</a><br>
+    <a href="parallax-scrolling-examples/example9.html" target="example">Example 9</a>
+</div>
+
+     </td>
+   </tr>
+</table>
+
+<p>
+  Parallax Examples explained on my <a href="https://www.taccgl.org/blog/parallax-scrolling.html" target="blog">blog on https://www.taccgl.org</a>.<br>
+</p>
+
+
+<h3>    Examples requiring Canvas 3D:</h3>
+<p>
+    <a href="javascript:torus();">3D-Torus</a><br>
+    <a href="javascript:shadowBg();ShaderExperiment('sexp8',10,true);">Twist</a> 
+</p>
+
+
+
+<p>
+    See the <a href="https://www.taccgl.org/tutorial/firstExample.html"  target="tutorial" rel="nofollow">taccGL &trade; Tutorial on https://www.taccgl.org</a> how to get started.
+    If you experience any problems please consult <a href="https://www.taccgl.org/faq.html"  target="manual">FAQ on https://www.taccgl.org</a>, or send me  comments or questions
+    to contact@taccgl.org.</p>
+</p>
+
+
+<div style="padding-left:20px">  <b>NOTE</b>
+  <em> This is BETA Software and known to contain bugs. It is not implemented completely and will probably not run 
+     on all browsers and client computers. </p>
+</em>
+</div>
+
+<p> The library runs best on a client/browser with decent performance on HTML 5 canvas.
+       If the performance is not sufficient features are silently disabled (e.g. the display of
+       shadows). The idea is to keep the underlying HTML pages operational, if necessary 
+       with simpler or even disabled taccGL &trade; animations.
+       See <a href="https://www.taccgl.org/developer_doc/Restrictions.html"  rel="nofollow"  target="manual">Restrictions on https://www.taccgl.org/</a> for details.
+
+</div>
+
+
+
+<script>
+function shadowBg () {
+   taccgl.a(document.body).posZ(-1000).resizeZ().color("black").shadowOnly().showafter().start();
+}
+
+function torus ()
+{
+   taccgl.objFile().read("doc/taccgldoc.obj",true,torusLoaded);
+}
+
+function torusLoaded (of)
+{
+   demoobjfile=of;
+   var a=taccgl.a("myel",demoobjfile.objs("Torus")).modFit("y").rotateMiddle(0.7,0.7,0).rotatePart(1,4*3.14159).dur(10).start();
+   taccgl.start();
+}
+
+function multi ()
+{
+   shadowBg ();
+   var m=taccgl.mSingle(taccgl.actor('myel',null,'hidden')).visFinal('');
+   m.sliceV(40,0,0,0.9).mp(function(a,i){a.from (0,a.y0+200,-1500).vEnd(0,0,0).rotateMiddle(1,0,0).starttime(1.5-i*0.06);});
+   m.duration(2).showafter().start();     
+   taccgl.start ();
+}
+
+// Shader Experiments
+function ShaderExperiment(n,d,lighting)
+{
+   taccgl.texClearAll();
+   var t= taccgl.actor("myel"); 
+   var sc = taccgl.ssc(n).el("EL","all").times().dynTex().fragCoord(); sc.singleTex=true;
+   sc.setLighting(lighting);
+   t.sc(sc); 
+   t.duration(d).start();
+   taccgl.start();
+}
+</script>
+<script id="sexp1" type="x-gsgl/x-shader">
+:color
+       col=vec3(1.0,1.0,1.0)-col;
+</script>
+<script id="sexp8" type="x-gsgl/x-shader">
+:fragPos
+   ct = clamp(ct*1.1,0.0,1.0);
+   float al=atan(ELMT-t,s-ELMS); float al1=(al+3.14159)/2.0/3.14159;
+   float r=sqrt( (s-ELMS)*(s-ELMS) + (t-ELMT)*(t-ELMT) );
+   float tt = ct*(1.0-ct)*3.14159*10.0*(1.0-r/ELW);
+   s = ELMS + cos(al+tt)*r; t= ELMT - sin(al+tt)*r;
+</script>
+<script>
+function doOnLoad(){
+  if (window.taccgl) {
+     document.getElementById ("taccglLoadWarning").style.display="none";
+  }
+}
+</script>
+
+
+
+</div>
+
+<div style="height:100px">&nbsp;</div>
+</body>

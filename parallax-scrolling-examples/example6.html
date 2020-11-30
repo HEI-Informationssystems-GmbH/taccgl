@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta name="referrer" content="no-referrer">
+    <!--
+Copyright (c) 2020 H.E.I.Informationssysteme GmbH (https://www.taccgl.org) and suppliers
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+        
+    
+    
+    
+    <title> Parallax scrolling example 6 - Simple Fade Animation </title>
+    <!-- sample parallax scrolling website using taccgl(TM), demonstrating a Simple Fade Animation 
+    
+    
+    
+
+    Please continue reading the source code of this page, comments are
+    included explaining the most important parts.
+     -->
+
+
+    <script src="../taccgl.js"></script>
+
+
+    <style>
+      body        {margin:0px;
+                   font-family:Calibri,helvetica,sans-serif,arial; font-size:26px;
+                   background-color:#003000; text-size-adjust : none; moz-text-size-adjust : none; webkit-text-size-adjust : none;
+                  }
+      .page       {background-color:white; margin:0px; width:100%}
+      .textinpage {width:600px; padding:80px;}
+      #textBlock1      {padding-top:50px; padding-bottom:50px}
+      #textBlock2      {margin-bottom:500px}
+
+      /*   bgimage contains the image background to that parallax scrolling is applied.
+           It has a rather wide image which is supposed to fill the full width of 
+           the screen. The img tag is encapsulated in a div using overflow:hidden to clip
+	   the right part of the image in case the screen/window is not wide enough.
+	   (note that taccgl(TM) beta version currently can not do background images. 
+      */
+      .bgimage    {position:relative; z-index:-10; overflow:hidden; margin-left:0px}      #bgImg   {width:150.4vh; min-width:100vw}
+      
+    </style>
+
+  </head>
+
+
+  <body onload="doOnload()" >
+    <div id="textBlock1" class="page">
+        <div class="textinpage">
+              
+
+ 	   <h1> Creating Parallax Scrolling Websites : Example 6</h1>
+      
+           <p> 
+	          This is an example page. Read the correspoinding
+	          <a href="http://www.taccgl.org/blog/parallax-scrolling.html">blog article</a> on
+	          <a href="https://www.taccgl.org">www.taccgl.org</a>.
+               
+	       </p>
+	   <p> 
+	   </p>
+
+  	   
+	   <p> This example 6 is implemented using the computers 3D graphic
+	       hardware.     
+	       
+	       
+	   </p>
+	   It is a simple example, to show the basics
+               of animations during scrolling. Further 
+	       <a href="example7.html">examples</a>
+               demonstrate the advantages of the 3D acceleration. 
+
+               <p> This example page has two text blocks and a big
+	       image. The animation scrolling down fades out
+               the first text block to show the background image.
+	       Further scrolling fades in the second text block.
+               </p>   	    
+      </div>
+    </div>
+
+    
+
+
+    <div id="bgDiv" class="bgimage">
+      <img  id="bgImg" src="../pic/CubeBack/CBUp.png">
+    </div>
+
+    <div id="textBlock2" class="page">
+      <div class="textinpage">
+	<h1> Please read the Commented Source Code of this Page  </h1>
+
+
+	
+
+	<p>  
+	    
+	    
+	    Initially (without javascript) this page shows the first text block
+            followed by the image and then the second text block.
+	    The 3D animation declars the image to appear 5000px behind the 
+            text plane and so scrolls more slowly. Therefore less space is
+	    needed for the image and the second text block is moved upwards
+	    using <br>'margin-top:-600px'.
+	    In addition simple fade-out and fade-in animations for 
+            the first and second text block are defined. 
+	    
+	    
+	    <p> Next example: <a href="example7.html">Example 7</a> 
+	    
+	    
+	</p>
+	</div>
+    </div>
+
+    <script>
+      function doOnload(){ 
+         /*   first set options for taccgl(TM), here we need to set taccgl_texCanWidth and taccgl_texCanHeight
+                   large enough to cover the "bgImg" element. Often the default size is sufficient, but in this example
+                   the "bgImg" becomes as wide as the browser window, which can be become wider than the default */
+         taccgl.texCanInit(); taccgl.texCanEl("bgImg","rb",2,2); //Adjust the size of the texture canvas to hold the bgImg completely
+         taccgl.texCanEl("textBlock1","rb",0, taccgl.bb("textBlock2").h); //Adjust the size of the texture to hold both text blocks
+         taccgl.texClearAll();                               //Need to clear the texture canvas in case this is called by "onResize"
+         taccgl.stdEye.parallax(1,0.7);   /*   move the eye position during scroll */
+         taccgl.setShadowZRange(-17000,2000);
+
+
+
+         if (taccgl.ddmode){
+            taccgl.a("bgDiv").posZ(-5000,-5000,{t0:0}).cssRelPos().cssParallax();
+            /* if not webgl(TM) is available we do the background with css */
+            taccgl.a("bgDiv").alpha(0).permanent().start();
+            /* dummy invisible images with permanent to avoid that the animation stops */
+         } else 
+             taccgl.actor("bgImg")       /*   animate the img element bgImg */
+               .position(0,500,0)
+               .posZ(-5000,{t0:0}) 
+	                                /*   move it 5000 pixels behind the screen */
+               .resizeZ()               /*   resize the img element to compensate for perspective shrinking */
+               .permanent()             /*   run that animation forever  */
+               .start();
+
+         
+         taccgl.a("textBlock1").paint().opacity(0).alpha(1,0).startScroll(0).distance(500)
+                    .castShadow(false).showBefore().start();
+              /* here we use taccgl.a().paint().opacity() for almost the same effect as taccgl.actor() 
+                      but to keep links working by using opacity.
+                      alpha(1,0) fades out the element and castShadow(false) removes the shadow,
+                      that does not look good with the fade effect. */
+
+         if (taccgl.ddmode||taccgl.dddmode) {
+            document.getElementById("textBlock2").style.marginTop="-600px";
+         }
+         taccgl.a("textBlock2").opacity(0).paint().alpha(0,1)
+                    .absStartScroll(900).distance(500).castShadow(false).showAfter().start();
+	 
+         
+	 taccgl.stdLight.parallaxPos(1,1.2);                       /*   move light source during scroll */
+
+         taccgl.start('no epilepsy warning');                /*   start the animation */
+
+	 taccgl.onResize=function(){
+	   taccgl.stop(); doOnload()
+	 }
+         /*   restart the animation after resizing the window */
+      }
+
+
+    </script>
+  </body>
+
+</html>

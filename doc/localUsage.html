@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=11" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<!--  
+H.E.I. Informationssysteme GmbH
+Wimpfener Strasse 23
+68259 Mannheim
+Germany
+http://www.taccgl.org
+email: contact@taccgl.org
+Sales Tax ID: DE185233091
+HRB Mannheim 7273
+Geschaeftssfuehrer: Dr. Helmut Emmelmann
+Phone: +49 - 621 - 79 51 41
+Fax:   +49 - 621 - 79 51 61
+
+
+
+Copyright (c) 2020 H.E.I.Informationssysteme GmbH (https://www.taccgl.org) and suppliers
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+This is BETA Software and known to contain bugs. It is probably
+not implemented completely and will probably not run on all
+browsers and client computers. It will switch off itself on
+certain client computers and browsers. In addition some client
+computers might run animations slowly, animations may appear
+choppy or jumpy, or even client computers might get overloaded or
+even crash. 
+
+
+      M E D I C A L     W A R N I N G   
+      Note that taccgl allows you to add fast flashing and video game like animations to web pages. A small percentage of 
+      the population may experience epileptic symptoms when exposed to such animations. You might want to, or you may even 
+      be required to, add / show an epileptic warning message on your web site before showing such animations and you might 
+      want to or you may even be required to avoid certain types of animations on your web site. Please protect yourself 
+      when programming animations and protect the users of your web site and take the following warning message seriously:  
+ 
+"     EPILEPSY WARNING, READ BEFORE VIEWING THE FOLLOWING ANIMATIONS,                                                       "+
+"     BEFORE USING A VIDEO GAME SYSTEM, BEFORE PROGRAMMING, WATCHING AND PUTTING ANIMATIONS ONLINE                          "+
+"                                                                                                                           "+ 
+"     MEDICAL RESEARCH INDICATES A SMALL PERCENTAGE OF THE POPULATION MAY EXPERIENCE EPILEPTIC SEIZURES OR SEIZURE-LIKE     "+
+"     SYMPTOMS  EXPOSED TO CERTAIN STIMULI, INCLUDING, WITHOUT LIMITATION, LIGHT PATTERNS, FLASHING LIGHTS OR CERTAIN       "+
+"     PATTERNS OF BACKGROUND ON A TELEVISION SCREEN, OR VIDEO MONITOR. EXPOSURE TO THESE STIMULI WHILE PLAYING VIDEO GAMES  "+
+"     OR WATCHING ANIMATIONS MAY INDUCE AN EPILEPTIC SEIZURE OR SEIZURE LIKE SYMPTOMS IN THESE INDIVIDUALS. CERTAIN         "+
+"     CONDITIONS MAY INDUCE EPILEPTIC SYMPTOMS EVEN IN PERSONS WHO HAVE NO PRIOR HISTORY OF SEIZURES OF EPILEPSY. IF YOU    "+
+"     EXPERIENCE ANY OF THE FOLLOWING SYMPTOMS WHILE PLAYING A VIDEO GAME OR WATCH ANIMATIONS --- DIZZINESS, ALTERED VISION,"+
+"     EYE OR MUSCLE TWITCHES, LOSS OF AWARENESS, DISORIENTATION, AND INVOLUNTARZ MOVEMENT OR CONVULSIONS ---                "+
+"     IMMEDIATELY DISCONTINUE USE AND CONSULT YOUR PHYSICAN BEFORE PLAY OR WATCHING ANIMATIONS.                             ";
+-->
+<title> taccgl Local Test Page  </TITLE> 
+<script src="../taccgl.js"></script>
+<script>
+  taccgl_Com_dddmode="../pic/Mode3D.png";
+  taccgl_Com_ddmode="../pic/Mode2D.png";
+  taccgl_Com_off="../pic/ModeNo.png";
+  taccgl_MeasureImage="../pic/taccglMea";
+  taccgl_ImmediateMeasureImage="../pic/taccglMea";
+</script>
+</head>
+
+
+<body style="font-family:Calibri,helvetica,sans-serif,arial;">
+   <div id="header1div" style="width:calc(90% + 30px); height:100px; position:relative">
+      <img id= "taccgl_CommentImage" src="../pic/ModeUnknown.png" style="position:absolute; right:160px; margin-top:10px"
+	   title="Canvas Mode Detected">
+      <img id= "taccgl_ImmediateMeasureImage" src="../pic/taccglMeaNo.png" style="position:absolute; right:80px; margin-top:10px"
+	   title="Performance Quality measured of previous Animation run" width="70px" height="70px">
+      <img id= "taccgl_MeasureImage" src="../pic/taccglMeaNo.png" style="position:absolute; right:0px; margin-top:10px"
+	   title="Performance Quality measured of first 10 Animations run" width="70px" height="70px">
+   </div>
+
+<div id="myel" style="background-color:#e0e0ff; width:90%x; padding:15px; border: solid black 1px; box-shadow : 40px 40px 4px 4px rgba(0,0,0,0.3);">
+
+<h1> taccGL &trade; Local Test Page </h1> 
+
+<div id="placeholder" style="float:right; width:50px; height:50px"></div>
+<p> Typically some examples and some images do not work if you are using the library locally (i.e. with "file://" URLs). 
+  Please click on the link below to check if the 3D-Torus appears. </p>
+
+<p> <a href="javascript:torus();">3D-Torus</a> </p>
+
+<p> If this does not work and you are accessing the library locally (i.e. with "file://" URLs)
+  we very much recommend to install a local web server (e.g. the chrome extension "Web Server for Chrome")
+  and then access the library with "http://".
+</p>
+
+<p> For file URLs to work with a webkit browser, e.g. chrome, you need
+  to set some options. This has some security implications, so make
+  sure to read the documentaion of the option or better resort to a
+  local web server.</p>
+
+<p> In order to set the options you need to restart chrome with the options (it is not sufficient to 
+    just start a new Chrome window in parallel with an already running chrome).
+    To apply the options it is easiest to copy the chrome desktop icon, then to open
+    the context menu with the right mouse button, select "Properties" and then to append
+    the options to the program name e.g.
+<p style="margin-left:40px">
+    <tt> "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"  --allow-file-access-from-files  </tt>
+
+<p> Note that the installation path of chrome might vary on your system.</p>
+
+<p> You can also start chrome from a command window using these options, however starting from the 
+    "run" entry in the windows start menu might not work.
+</p>
+
+<p>
+<a href="../index.html">Back</a>
+</p>
+
+<script>
+
+function torus ()
+{
+    taccgl.objFile().read("../doc/taccgldoc.obj",true,torusLoaded);
+}
+
+function torusLoaded (of)
+{
+   demoobjfile=of;
+    var a=taccgl.a("placeholder",demoobjfile.objs("Torus")).modFit().rotateMiddle(0.7,0.7,0).rotatePart(1,4*3.14159).dur(10).start();
+   taccgl.start();
+}
+</script>
+
+</body>

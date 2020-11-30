@@ -1,0 +1,83 @@
+taccgl(TM)    version 0.62   index.html
+see https://www.taccgl.org for Examples, Tutorial, Documentation
+
+H.E.I. Informationssysteme GmbH
+Wimpfener Strasse 23
+68259 Mannheim
+Germany
+https://www.taccgl.org
+email: contact@taccgl.org
+Sales Tax ID: DE185233091
+HRB Mannheim 7273
+Geschaeftssfuehrer: Dr. Helmut Emmelmann
+Phone: +49 - 621 - 79 51 41
+Fax:   +49 - 621 - 79 51 61
+
+
+Unpack this zip file into the document root of your private protected
+web server.  It contains a folder named taccgl062 with the library,
+some documentation, and some examples.
+
+If you want to run it on a public web site see Installing the Library
+(https://www.taccgl.org/developer_doc/InstallLibrary.html).
+
+Afterwards point your browser to /taccgl062/index.html on your web
+site. On successful installation this shows some simple examples.
+
+W A R N I N G    B E T A   Software
+
+This is BETA Software and known to contain bugs. It is probably
+not implemented completely and will probably not run on all
+browsers and client computers. It will switch off itself on
+certain client computers and browsers. In addition some client
+computers might run animations slowly, animations may appear
+choppy or jumpy, or even client computers might get overloaded or
+even crash. 
+
+
+M E D I C A L     W A R N I N G   
+Note that taccgl allows you to add fast flashing and video game like animations to web pages. A small percentage of 
+the population may experience epileptic symptoms when exposed to such animations. You might want to, or you may even 
+be required to, add / show an epileptic warning message on your web site before showing such animations and you might 
+want to or you may even be required to avoid certain types of animations on your web site. Please protect yourself 
+when programming animations and protect the users of your web site and take the following warning message seriously:  
+
+EPILEPSY WARNING, READ BEFORE VIEWING THE FOLLOWING ANIMATIONS,                                             
+BEFORE USING A VIDEO GAME SYSTEM, BEFORE PROGRAMMING, WATCHING AND PUTTING ANIMATIONS ONLINE                
+                                                                                                                 
+MEDICAL RESEARCH INDICATES A SMALL PERCENTAGE OF THE POPULATION MAY EXPERIENCE EPILEPTIC SEIZURES OR SEIZURE-LIKE 
+SYMPTOMS  EXPOSED TO CERTAIN STIMULI, INCLUDING, WITHOUT LIMITATION, LIGHT PATTERNS, FLASHING LIGHTS OR CERTAIN   
+PATTERNS OF BACKGROUND ON A TELEVISION SCREEN, OR VIDEO MONITOR. EXPOSURE TO THESE STIMULI WHILE PLAYING VIDEO GAMES
+OR WATCHING ANIMATIONS MAY INDUCE AN EPILEPTIC SEIZURE OR SEIZURE LIKE SYMPTOMS IN THESE INDIVIDUALS. CERTAIN   
+CONDITIONS MAY INDUCE EPILEPTIC SYMPTOMS EVEN IN PERSONS WHO HAVE NO PRIOR HISTORY OF SEIZURES OF EPILEPSY. IF YOU 
+EXPERIENCE ANY OF THE FOLLOWING SYMPTOMS WHILE PLAYING A VIDEO GAME OR WATCH ANIMATIONS --- DIZZINESS, ALTERED VISION,
+EYE OR MUSCLE TWITCHES, LOSS OF AWARENESS, DISORIENTATION, AND INVOLUNTARZ MOVEMENT OR CONVULSIONS ---      
+IMMEDIATELY DISCONTINUE USE AND CONSULT YOUR PHYSICAN BEFORE PLAY OR WATCHING ANIMATIONS.
+
+
+BSD 2-Clause License
+
+Copyright (c) 2020 H.E.I.Informationssysteme GmbH (https://www.taccgl.org) and suppliers
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
